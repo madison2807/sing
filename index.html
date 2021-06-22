@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <link href="sing.css" rel="stylesheet">
+</head>
+<body>
+<div id="chanteur">
+    <div class="split left mesChanteurs" v-bind:style="{'backgroundImage': 'url(' + imageFond + ')' }">
+    </div>
+
+    <div class="split right">
+        <div class="boutonChanteur" @mouseover=imageFond='selena.jpg' @mouseout= imageFond='chanteur.png'>Selena Gomez</div>
+        <div class="boutonChanteur" @mouseover=imageFond='miley.jpeg' @mouseout= imageFond='chanteur.png'>Miley</div>
+        <div class="boutonChanteur" @mouseover=imageFond='lomepal.jpeg.svg' @mouseout= imageFond='chanteur.png'>Lomepal</div>
+        <div class="boutonChanteur" @mouseover=imageFond='tayc.jpeg' @mouseout= imageFond='chanteur.png'>Tayc</div>
+    </div>
+</div>
+</body>
+
+<script>
+    new Vue({
+        el: '#chanteur',
+        data: {
+            imageFond:'chanteur.png'
+        },
+        computed: {}
+    })
+</script>
+</html>
